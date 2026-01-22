@@ -1,0 +1,436 @@
+@charset "utf-8";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+ul {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  opacity: 0.8;
+}
+body {
+  font-family: "游ゴシック Medium", YuGothic, YuGothicM,
+    "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #000000;
+  background-color: #ffff7f;
+}
+.wrapper {
+  width: 900px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+}
+h1::before{
+  color: #ffffff;
+}
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 80px;
+}
+h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+header{
+    z-index: 10;
+    height: 80px;
+    line-height: 80px;
+    background-color:#963531;
+}
+header h1{
+    color:#ffffff;
+}
+header h1 a:hover{
+  color:#ffff7f;
+}
+
+header nav ul {
+  display: flex;
+}
+header nav ul li {
+  margin-left: 20px;
+  font-size: 16px;
+  color:#ffffff;
+}
+
+header nav ul li a:hover {
+  color:#ffff7f;
+  width: 280px;
+  padding-left: 1.5em;
+  letter-spacing: 0.1em;
+  }
+
+header .inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+:root {
+  --swiper-theme-color: #fff;
+}
+
+.slider {
+  width: 800px;
+  height: 600px;
+}
+
+#about {
+  padding: 120px 0 0;
+}
+.boxSize {
+	width: 400px;
+	height: 400px;
+	border: 1px solid #000;
+	margin: 50px 0;
+	background-color: #fff;
+	box-sizing: border-box;
+}
+
+.pattern{
+	width: 100%;
+	background-image: url(../images/app.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+    box-shadow: 0px 0px 30px #963531;
+    padding: 8em 0em;
+}
+.name,
+.skill {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+#about h3 {
+  margin-bottom: 30px;
+}
+.name-img,
+.skill-img {
+  flex-basis: 35%;
+}
+.name-img img {
+  border-radius: 50%;
+}
+
+.skill-img img {
+  border-radius: 50%;
+}
+
+.skill {
+  flex-direction: row-reverse;
+}
+.name-text,
+.skill-text {
+  flex-basis: 60%;
+}
+
+#carder {
+  margin: -40px 0 0;
+  padding: 100px 0 ;
+  background-color: #ffe100;
+}
+#carder h3 {
+  text-align: center;
+}
+#carder ul {
+  display: flex;
+  justify-content: space-between;
+}
+#carder li {
+  width: 30%;
+}
+#carder h3 {
+  margin: 8px 0;
+}
+
+footer {
+  text-align: center;
+  font-size: 12px;
+  background-color:#963531;
+  color: #ddd;
+  padding: 40px;
+}
+
+footer p{
+    color:#ffffff;
+}
+
+.wrapper{
+  min-height: 100vh;
+}
+
+.name-text,
+.skill-text,
+.photo li,
+.contact {
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.name-text {
+  transform: translateX(50px);
+}
+.skill-text {
+  transform: translateX(-50px);
+}
+
+.photo li {
+  transform: translateY(50px);
+}
+.photo li:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.photo li:nth-child(3) {
+  transition-delay: 0.4s;
+}
+.contact{
+  transform: translateY(50px);
+}
+.name-text.show,
+.skill-text.show,
+.photo.show li,
+.contact.show {
+  opacity: 1;
+  transform: none;
+}
+
+.name-img img {
+  clip-path: circle(0%);
+  transition: clip-path 0.8s;
+  transition-delay: 0.3s;
+}
+.name-img.show img {
+  clip-path: circle(100%);
+}
+
+.skill-img img{
+  clip-path: circle(0%);
+  transition: clip-path 0.8s;
+  transition-delay: 0.3s;
+ }
+ .skill-img.show img {
+  clip-path: circle(100%);
+}
+
+
+
+#contact {
+  padding-top: 150px;
+  padding-bottom: 92px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #ffffff;
+  background-image: url(../images/card2.jpg);
+  background-position:center bottom;
+  background-size:cover;
+  width:100%;
+  height:500px;                               
+  text-align: center;
+}
+
+
+.btn-wrap button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+#open-btn {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 10px 40px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-size: 16px;
+  border: 1px #fff solid;
+  transition: background-color 0.3s;
+}
+.contact-btn.show {
+  animation-name: scale-animation;
+  animation-duration: 0.3s;
+  animation-delay: 0.5s;
+ }
+ 
+ @keyframes scale-animation{
+ 0%{
+   transform: scale(0.8, 0.8);
+ }
+ 70% {
+   transform: scale(1.2, 1.2);
+ }
+ 100%{
+   transform: scale(1, 1);
+ }
+ }
+
+ .marker {
+  background-image: linear-gradient(
+    to right,
+    transparent 50%
+  );
+  background-repeat: no-repeat;
+  background-size: 200% 50%;
+  background-position: 100% bottom;
+  transition: background-position 1s;
+ }
+ .marker.show {
+  background-position: 0% bottom;
+ }
+ 
+
+.toTop {
+  background:#963531;
+  width: 60px;
+  height: 60px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.6;
+  cursor: pointer;
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  opacity: 0;
+  transform: translateX(100px);
+  transition: all 0.3s;
+}
+
+.modalArea {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.modalArea .modalBg {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(30, 30, 30, 0.9);
+}
+
+.modalArea .modalWrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  max-width: 400px;
+  height: auto;
+  padding: 10px 30px;
+  background-color: #ffff7f;
+}
+
+.modalArea .modalWrapper .modalContents h2 {
+  text-align: center;
+  font-size: 3rem;
+  margin: 30px 0;
+}
+
+.modalArea .modalWrapper .modalContents p {
+  font-size: 1.2rem;
+  line-height: 2.0rem;
+  margin-bottom: 20px;
+}
+
+.flowing {
+	width: 0;
+	margin: 0;
+	font-size: 3vw;
+	font-weight: bold;
+	color: rgb(47, 47, 47);
+	white-space: nowrap;
+	overflow: hidden;
+	animation: flowing-anim 3s forwards linear;
+}
+
+@keyframes flowing-anim {
+  0%{
+    width: 0%;
+    }
+ 100%{
+    width: 100%;
+    }
+}
+
+.modalArea .modalWrapper .modalContents form[name="userForm"] p {
+  line-height: normal;
+  margin-bottom: 10px;
+}
+
+.modalArea .modalWrapper .modalContents form[name="userForm"] p:nth-last-of-type(2) {
+  margin-bottom: 30px;
+}
+
+.modalArea .modalWrapper .modalContents form[name="userForm"] p input {
+  border: 1px solid #999;
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+.modalArea .modalWrapper .modalContents form[name="userForm"] .signUpButton {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 5px;
+  background-color: #963531;
+  color: #ffff;
+  text-align: center;
+}
+
+.modalArea .modalWrapper .modalContents form[name="userForm"] .alertBox {
+  border: 1px solid red;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: red;
+  border-radius: 5px;
+  padding-left: 10px;
+  background-color: pink;
+}
+
+.modalArea .modalWrapper .closeModal {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  cursor: pointer;
+}
+.toTop:hover {
+  color: #963531;
+  background: #ffff7f;
+}
+
+.toTop.show {
+  opacity: 1;
+  transform: none;
+}
+ 
